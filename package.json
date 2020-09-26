@@ -1,0 +1,53 @@
+{
+    "name": "yungis",
+    "version": "1.0.0",
+    "description": "基于LeafLet的地图开发框架",
+    "main": "yungis.umd.min.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "npm run build:leaflet",
+        "build:leaflet": "vue-cli-service build --target lib --name leaflet4vue --dest dist/leaflet src/leaflet/index.js",
+        "build:yungis": "vue-cli-service build --target lib --name yungis --dest dist/yungis src/yungis/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "renzhsh",
+    "license": "MIT",
+    "engines": {
+        "node": ">= 10.0.0",
+        "npm": ">= 6.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ],
+    "dependencies": {
+        "ant-design-vue": "^1.4.10",
+        "axios": "^0.19.0",
+        "core-js": "^3.4.7",
+        "enquire.js": "^2.1.6",
+        "esri-leaflet": "^2.3.2",
+        "esri-leaflet-cluster": "^2.0.1",
+        "leaflet": "^1.6.0",
+        "proj4": "^2.4.4",
+        "rzs-spring": "^1.0.2",
+        "vue": "^2.6.10",
+        "vue-svg-loader": "^0.15.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.0.0",
+        "@vue/cli-service": "^4.0.0",
+        "babel-plugin-import": "^1.8.0",
+        "less": "^3.10.0",
+        "less-loader": "^5.0.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    }
+}

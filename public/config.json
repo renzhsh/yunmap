@@ -1,0 +1,160 @@
+{
+    "map": {
+        "zoom": 15,
+        "center": { "x": 118.575268, "y": 31.695054 },
+        "minZoom": 0,
+        "maxZoom": 18,
+        "centerAutoLevel": 6,
+        "copyright": false,
+        "controls": [
+            { "type": "scale" },
+            {
+                "type": "location",
+                "format": "<div>经度:{x}</div><div>纬度:{y}</div>"
+            },
+            {
+                "type": "tool",
+                "item": ["home", "location", "fullscreen"],
+                "position": "bottomright"
+            },
+            { "type": "zoom", "position": "bottomright" },
+            { "type": "layers", "position": "bottomleft", "visible": false }
+        ],
+        "basemaps": [
+            {
+                "id": 10,
+                "name": "地图底图",
+                "type": "group"
+            },
+            {
+                "pid": 10,
+                "name": "谷歌卫星",
+                "type": "tile",
+                "url": "http://www.google.cn/maps/vt?lyrs=s&x={x}&y={y}&z={z}",
+                "icon": "googleimage.png"
+            },
+            {
+                "pid": 10,
+                "name": "高德地图",
+                "type": "tile",
+                "url": "http://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=7&x={x}&y={y}&z={z}",
+                "icon": "googleimage.png",
+                "subdomains": "1234",
+                "visible": true
+            }
+        ],
+        "operationallayers": []
+    },
+
+    "widget": {
+        "debugger": true,
+        "version": "time",
+        "defaultOptions": {
+            "windowOptions": {
+                "skin": "animation-fade",
+                "position": {
+                    "top": 50,
+                    "right": 10
+                },
+                "maxmin": false,
+                "resize": true
+            },
+            "autoDisable": true,
+            "disableOhter": true
+        },
+        "widgetsAtStart": [
+            {
+                "name": "右上角工具栏",
+                "uri": "widgets/toolBar/widget.js",
+                "data": [
+                    {
+                        "name": "漫游",
+                        "icon": "fa fa-globe",
+                        "onclick": "L.widget.disableAll()",
+                        "visible": true
+                    },
+                    {
+                        "name": "地图",
+                        "icon": "fa fa-map",
+                        "widget": "widgets/manageBasemaps/widget.js",
+                        "visible": false
+                    },
+                    {
+                        "name": "图层",
+                        "icon": "fa fa-tasks",
+                        "widget": "widgets/manageLayers/widget.js"
+                    },
+                    {
+                        "name": "工具",
+                        "icon": "fa fa-cubes",
+                        "children": [
+                            {
+                                "name": "测量",
+                                "icon": "fa fa-calculator",
+                                "widget": "widgets/measure/widget.js"
+                            },
+                            {
+                                "name": "标记",
+                                "icon": "fa fa-edit",
+                                "widget": "widgets/addmarker/widget.js"
+                            },
+                            {
+                                "name": "坐标定位",
+                                "icon": "fa fa-map-pin",
+                                "widget": "widgets/centerXY/widget.js"
+                            },
+                            {
+                                "name": "视角书签",
+                                "icon": "fa fa-tags",
+                                "widget": "widgets/bookmark/widget.js"
+                            },
+                            {
+                                "name": "地区导航",
+                                "icon": "fa fa-paper-plane",
+                                "widget": "widgets/navXZQH/widget.js"
+                            },
+
+                            {
+                                "name": "分屏对比",
+                                "icon": "fa fa-window-restore",
+                                "widget": "widgets/mapCompare/widget.js"
+                            },
+                            {
+                                "name": "卷帘对比",
+                                "icon": "fa fa-columns",
+                                "widget": "widgets/mapSwipe/widget.js"
+                            },
+
+                            {
+                                "name": "标绘",
+                                "icon": "fa fa-object-group",
+                                "widget": "widgets/plot/widget.js"
+                            },
+                            {
+                                "name": "打印",
+                                "icon": "fa fa-print",
+                                "widget": "widgets/print/widget.js"
+                            },
+                            {
+                                "name": "出图",
+                                "icon": "fa fa-file-image-o",
+                                "widget": "widgets/expImg/widget.js"
+                            },
+                            {
+                                "name": "街景",
+                                "icon": "fa fa-street-view",
+                                "widget": "widgets/streetscape/widget.js"
+                            },
+                            {
+                                "name": "分享",
+                                "icon": "fa fa-share",
+                                "widget": "widgets/shareUrl/widget.js"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "widgets": []
+    }
+}

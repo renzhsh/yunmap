@@ -1,0 +1,145 @@
+.map-fish-bone-toolbar {
+    font-size: 1px;
+    min-width: 45px;
+    min-height: 200px;
+
+    .fish-bone-button {
+        width: 42px;
+        height: 42px;
+        background-image: url(img/mapNav.png);
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+
+        &.top-over {
+            background-position: 0px -44px;
+        }
+
+        &.down-over {
+            background-position: 0px -132px;
+        }
+
+        &.left-over {
+            background-position: 0px -176px;
+        }
+
+        &.right-over {
+            background-position: 0px -88px;
+        }
+
+        .button-line {
+            width: 42px;
+            height: 14px;
+
+            .button-item {
+                background-repeat: no-repeat;
+                cursor: pointer;
+                height: 14px;
+                width: 14px;
+                display: inline-block;
+            }
+        }
+    }
+
+    .fish-bone-slider {
+        width: 21px;
+        margin-top: 5px;
+        margin-left: 9px;
+        float: left;
+
+        .slider-zoomIn {
+            background-image: url(img/mapNav.png);
+            background-position: 3px -220px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 26px;
+            height: 20px;
+        }
+
+        .slider-zoomOut {
+            background-image: url(img/mapNav.png);
+            background-position: 3px -265px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 26px;
+            height: 20px;
+        }
+
+        .slider-ticks {
+            background-image: url(img/mapNav.png);
+            background-position: -28px -233px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 7px;
+            height: 96px;
+            position: relative;
+            left: 10px;
+        }
+
+        .slider-ticks-sel {
+            background-image: url(img/mapNav.png);
+            background-position: -36px -233px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 7px;
+            height: 22px;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .slider-ticks-block {
+            background-image: url(img/mapNav.png);
+            background-position: 0px -309px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 18px;
+            height: 10px;
+            position: absolute;
+            z-index: 2001;
+            left: -6px;
+            bottom: 22px;
+
+            &.activated {
+                background-position: 0px -320px;
+            }
+        }
+    }
+
+    &.show-marker {
+        .fish-bone-marker {
+            display: block;
+        }
+    }
+
+    .fish-bone-marker {
+        width: 27px;
+        margin-top: 22px;
+        float: left;
+        position: relative;
+        display: none;
+
+        .marker {
+            position: absolute;
+            background-image: url(img/mark.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 27px;
+            height: 18px;
+        }
+
+        .mark-street {
+            background-position: 0px 0px;
+        }
+
+        .mark-city {
+            background-position: 0px -20px;
+        }
+
+        .mark-province {
+            background-position: 0px -40px;
+        }
+
+        .mark-country {
+            background-position: 0px -60px;
+        }
+    }
+}
